@@ -4,7 +4,7 @@ function cinemaGoing(card, ticket, frac) {
   let schemaPrice = card;
   let ticketNumber = 1;
 
-  while(schemaPrice > regularPrice){
+  while(Math.ceil(schemaPrice) >= regularPrice){
     regularPrice += ticket;
     schemaPrice = schemaPrice + ticket * Math.pow(frac, ticketNumber)
     // schemaPrice = schemaPrice + Math.pow(15 , frac * ticketNumber)
